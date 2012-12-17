@@ -7,4 +7,4 @@ def preview(request):
 
     return direct_to_template(
         request, 'django_markdown/preview.html',
-        content=request.REQUEST.get('data', 'No content posted'), css=css)
+        {'content': request.REQUEST.get('data', 'No content posted'), 'css': css})
